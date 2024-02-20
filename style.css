@@ -7,5 +7,5 @@
 
 .strike
 {
-    text-decoration: line-through;
+    text-decoration: line-through red 5px;
 }

@@ -34,6 +34,13 @@ createApp({
             // "Questa riga di codice crea un nuovo array utilizzando lo spread operator per mantenere l'integrità dei dati, poi aggiunge una nuova attività a questo nuovo array di oggetti todos."
             this.todos=[...this.todos, {text: this.wow, done: false}]
             this.wow="";
+        },
+        change(index)
+        {
+            // this.todos[index].done puo essere definito come il percorso che noi facciamo all'interno dell'array di oggetti fino ad arrivare a done ogni volta
+            this.todos[index].done =! this.todos[index].done
+            // usaimo l'operatore di inversione cosi da riuscire a invertire il valore
+
         }
         
     },

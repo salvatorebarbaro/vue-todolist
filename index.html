@@ -17,14 +17,14 @@
     <!-- VUE 3 -->
     <script src="https://unpkg.com/vue@3"></script>
 
-    <div id="app" class="container col-8  mt-5 text-center">
+    <div id="app" class="container col-8  mt-5 ">
         <h1 class="fs-2 ">To do list</h1>
 
         <ul class="list-group my-3  ">
             <li v-for="(current_item,index) in todos" class="list-group-item d-flex justify-content-between align-items-center red" :class="{'strike': current_item.done }">
                 <!-- grazie a questa condizione noi passiamo in modo dinamico tramite questa classe lo stile di barrato -->
               <!-- passiamo dinamicamente gli elementi -->
-              {{ current_item.text}}
+              <span @click="change(index)">{{ current_item.text}}</span>
               <!-- applichiamo un evento all'icona e gli passiamo la funzione  -->
               <i @click="removal(index)" class="fa-solid fa-bomb"></i>
             </li>
