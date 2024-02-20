@@ -24,14 +24,15 @@
             <li v-for="(current_item,index) in todos" class="list-group-item d-flex justify-content-between align-items-center red" :class="{'strike': current_item.done }">
                 <!-- grazie a questa condizione noi passiamo in modo dinamico tramite questa classe lo stile di barrato -->
               <!-- passiamo dinamicamente gli elementi -->
-              {{current_item.text}}
+              {{ current_item.text}}
               <!-- applichiamo un evento all'icona e gli passiamo la funzione  -->
               <i @click="removal(index)" class="fa-solid fa-bomb"></i>
             </li>
         </ul>
         <div class="input-group mb-3">
             <!-- v-model usato per collegare il risultato dell'input al evento del click -->
-            <input v-model="wow" type="text" class="form-control" placeholder="inserisci task" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <!-- @keydown.enter="add_task(wow) mettendo questo noi gli specifichiamo che quando preme il tasto enter lui richiama la funzione add_task -->
+            <input @keydown.enter="add_task(wow)" v-model="wow" type="text" class="form-control" placeholder="inserisci task" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button @click="add_task(wow)" class="btn btn-outline-secondary" type="button" id="button-addon2" class="fs-3">Aggiungi</button>
           </div>
         
