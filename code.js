@@ -6,6 +6,8 @@ createApp({
     data() {
         return {
 
+            
+
             todos: [
                 { text: "Pulire il terrazzo", done: false },
                 { text: "Annaffiare le piante", done: true },
@@ -19,6 +21,7 @@ createApp({
         // funzione per rimuovere elemento "terminato"
         removal(index)
         {
+            
             // implementiamo un controllo sull'array ed entrando dove la condizione è esatta andiamoa a dare la possibilità di cancellare
             if(this.todos[index].done == true)
             {
@@ -26,6 +29,12 @@ createApp({
                 this.todos.splice(index,1)
             }
         },
+        add_task(wow)
+        {
+            // "Questa riga di codice crea un nuovo array utilizzando lo spread operator per mantenere l'integrità dei dati, poi aggiunge una nuova attività a questo nuovo array di oggetti todos."
+            this.todos=[...this.todos, {text: this.wow, done: false}]
+            this.wow="";
+        }
         
     },
 }).mount('#app');
