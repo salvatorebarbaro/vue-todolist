@@ -16,11 +16,14 @@ createApp({
         }
     },
     methods: {
-        removal()
+        // funzione per rimuovere elemento "terminato"
+        removal(index)
         {
-            if(this.current_item.done == true)
+            // implementiamo un controllo sull'array ed entrando dove la condizione è esatta andiamoa a dare la possibilità di cancellare
+            if(this.todos[index].done == true)
             {
-                todos.slice(index)
+                // this usato per riferirsi agli elementi presenti all' inerno della nostra app
+                this.todos.splice(index,1)
             }
         },
         

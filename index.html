@@ -25,7 +25,8 @@
                 <!-- grazie a questa condizione noi passiamo in modo dinamico tramite questa classe lo stile di barrato -->
               <!-- passiamo dinamicamente gli elementi -->
               {{current_item.text}}
-              <i @click="removal()" class="fa-solid fa-bomb"></i>
+              <!-- applichiamo un evento all'icona e gli passiamo la funzione  -->
+              <i @click="removal(index)" class="fa-solid fa-bomb"></i>
             </li>
         </ul>
         
