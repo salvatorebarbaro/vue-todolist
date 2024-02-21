@@ -31,8 +31,8 @@
         </ul>
         <div class="input-group mb-3">
             <!-- v-model usato per collegare il risultato dell'input al evento del click -->
-            <!-- @keydown.enter="add_task(wow) mettendo questo noi gli specifichiamo che quando preme il tasto enter lui richiama la funzione add_task -->
-            <input @keydown.enter="add_task(wow)" v-model="wow" type="text" class="form-control" placeholder="inserisci task" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <!-- @keyup.enter="add_task(wow) mettendo questo noi gli specifichiamo che quando preme il tasto enter lui richiama la funzione add_task -->
+            <input @keyup.enter="add_task(wow)" v-model="wow" type="text" class="form-control" placeholder="inserisci task" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button @click="add_task(wow)" class="btn btn-outline-secondary" type="button" id="button-addon2" class="fs-3">Aggiungi</button>
           </div>
         
